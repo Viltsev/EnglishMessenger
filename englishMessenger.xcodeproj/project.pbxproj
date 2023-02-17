@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3603F22F0D6B2DC17945308C /* Pods_englishMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFD1B7327C36EBAACDB9C25 /* Pods_englishMessenger.framework */; };
+		8311525F299F85410001B758 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311525E299F85410001B758 /* StartViewController.swift */; };
+		83115261299F90750001B758 /* Simpleoak-RpP3o.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83115260299F90750001B758 /* Simpleoak-RpP3o.ttf */; };
+		83115263299FA49B0001B758 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83115262299FA49B0001B758 /* NewProfileViewController.swift */; };
 		83546354299D7104000FCC1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83546353299D7104000FCC1B /* GoogleService-Info.plist */; };
 		83546356299D77D4000FCC1B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83546355299D77D4000FCC1B /* TestViewController.swift */; };
 		83939509299E11E40048BB07 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83939508299E11E40048BB07 /* DatabaseManager.swift */; };
+		8393950C299EBA120048BB07 /* Mysteria-Nouveau.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8393950B299EBA120048BB07 /* Mysteria-Nouveau.ttf */; };
 		8395F734299CCEC00038376B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395F733299CCEC00038376B /* AppDelegate.swift */; };
 		8395F736299CCEC00038376B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395F735299CCEC00038376B /* SceneDelegate.swift */; };
 		8395F738299CCEC00038376B /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395F737299CCEC00038376B /* ConversationsViewController.swift */; };
@@ -28,9 +32,13 @@
 
 /* Begin PBXFileReference section */
 		1A7C1062F0631DAD738484B2 /* Pods-englishMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-englishMessenger.debug.xcconfig"; path = "Target Support Files/Pods-englishMessenger/Pods-englishMessenger.debug.xcconfig"; sourceTree = "<group>"; };
+		8311525E299F85410001B758 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		83115260299F90750001B758 /* Simpleoak-RpP3o.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Simpleoak-RpP3o.ttf"; path = "../../../../Downloads/Simpleoak/Simpleoak-RpP3o.ttf"; sourceTree = "<group>"; };
+		83115262299FA49B0001B758 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		83546353299D7104000FCC1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83546355299D77D4000FCC1B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		83939508299E11E40048BB07 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		8393950B299EBA120048BB07 /* Mysteria-Nouveau.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mysteria-Nouveau.ttf"; path = "../../../../Downloads/Mysteria-Nouveau.ttf"; sourceTree = "<group>"; };
 		8395F730299CCEC00038376B /* englishMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = englishMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8395F733299CCEC00038376B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8395F735299CCEC00038376B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8393950A299EBA000048BB07 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83115260299F90750001B758 /* Simpleoak-RpP3o.ttf */,
+				8393950B299EBA120048BB07 /* Mysteria-Nouveau.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8395F727299CCEBF0038376B = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,7 @@
 		8395F732299CCEC00038376B /* englishMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				8393950A299EBA000048BB07 /* Fonts */,
 				83546353299D7104000FCC1B /* GoogleService-Info.plist */,
 				8395F74B299CD16A0038376B /* Resources */,
 				8395F74A299CD15E0038376B /* ViewModels */,
@@ -120,6 +138,8 @@
 				8395F754299CD34A0038376B /* VideoPlayerViewController.swift */,
 				8395F756299CD37B0038376B /* NewConversationViewController.swift */,
 				8395F758299CD39D0038376B /* ProfileViewController.swift */,
+				8311525E299F85410001B758 /* StartViewController.swift */,
+				83115262299FA49B0001B758 /* NewProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8395F740299CCEC20038376B /* LaunchScreen.storyboard in Resources */,
+				83115261299F90750001B758 /* Simpleoak-RpP3o.ttf in Resources */,
 				83546354299D7104000FCC1B /* GoogleService-Info.plist in Resources */,
 				8395F73D299CCEC20038376B /* Assets.xcassets in Resources */,
+				8393950C299EBA120048BB07 /* Mysteria-Nouveau.ttf in Resources */,
 				8395F73B299CCEC00038376B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,10 +323,12 @@
 				8395F755299CD34A0038376B /* VideoPlayerViewController.swift in Sources */,
 				83939509299E11E40048BB07 /* DatabaseManager.swift in Sources */,
 				8395F75C299CDA0E0038376B /* Extensions.swift in Sources */,
+				8311525F299F85410001B758 /* StartViewController.swift in Sources */,
 				8395F734299CCEC00038376B /* AppDelegate.swift in Sources */,
 				8395F759299CD39D0038376B /* ProfileViewController.swift in Sources */,
 				8395F736299CCEC00038376B /* SceneDelegate.swift in Sources */,
 				8395F753299CD33E0038376B /* PhotoViewerViewController.swift in Sources */,
+				83115263299FA49B0001B758 /* NewProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
