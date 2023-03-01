@@ -7,9 +7,11 @@
 
 import UIKit
 import FirebaseAuth
-
+import JGProgressHUD
 class RegisterViewController: UIViewController {
 
+    private let spinner = JGProgressHUD(style: .dark)
+    
     private let titleLabel: UILabel = {
        let title = UILabel()
         title.text = "Registration"
@@ -224,12 +226,19 @@ class RegisterViewController: UIViewController {
                   return
               }
         
+        
+        spinner.show(in: view)
+        
         // Firebase login
         
         DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
             
             guard let strongSelf = self else {
                 return
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
             }
             
             guard !exists else {
@@ -241,18 +250,25 @@ class RegisterViewController: UIViewController {
             FirebaseAuth.Auth.auth().createUser(withEmail: email,
                                                 password: password,
                                                 completion: { authResult, error in
-                
                 guard authResult != nil, error == nil else {
-                    strongSelf.alertUserLoginError(message: "User already has been created!")
+//                    strongSelf.alertUserLoginError(message: "User already has been created!")
                     print("Error creating user")
                     return
                 }
                 
+                let chatUser = AppUser(firstName: firstName,
+                                       lastName: lastName,
+                                       emailAddress: email)
                 
-                DatabaseManager.shared.insertNewUser(with: AppUser(firstName: firstName,
-                                                                   lastName: lastName,
-                                                                   emailAddress: email))
+                DatabaseManager.shared.insertNewUser(with: chatUser, completion: { success in
+                    if success {
+                        // upload image
+                        
+                    }
+                })
                 
+                /// succesful log in
+                // Экран логина дисмисится, возвращаемся в initial view controller
                 strongSelf.navigationController?.dismiss(animated: true, completion: nil)
             })
 

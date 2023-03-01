@@ -11,7 +11,7 @@ import FirebaseAuth
 class NewProfileViewController: UIViewController {
 
     private let titleNewLabel: UILabel = {
-       let title = UILabel()
+        let title = UILabel()
         title.text = "Profile"
         title.font = UIFont(name: "Simpleoak", size: 60)
         title.textColor = .systemPurple
@@ -109,14 +109,17 @@ class NewProfileViewController: UIViewController {
     
     @objc private func conversationButtonFunc() {
         let vc = ConversationsViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
+//        vc.title = "Chats"
+//        let nav = UINavigationController(rootViewController: vc)
+//        nav.modalPresentationStyle = .fullScreen
+//        present(nav, animated: true)
     }
     
     
     @objc private func backToStartFunc() {
         let vc = StartViewController()
+        
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true) // переход на экран логина

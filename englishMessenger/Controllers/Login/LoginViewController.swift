@@ -6,10 +6,15 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
 
+    /// spinner
+    private let spinner = JGProgressHUD(style: .dark)
+    
+    /// title
     private let titleLabel: UILabel = {
        let title = UILabel()
         title.text = "Sign In"
@@ -19,6 +24,7 @@ class LoginViewController: UIViewController {
         return title
     }()
     
+    /// logo
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
@@ -26,6 +32,7 @@ class LoginViewController: UIViewController {
         return imageView
     }()
     
+    /// scrollView
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.clipsToBounds = true
@@ -33,6 +40,7 @@ class LoginViewController: UIViewController {
         return scrollView
     }()
     
+    /// emailField
     private let emailField: UITextField = {
         let field = UITextField()
         field.autocapitalizationType = .none
@@ -53,6 +61,7 @@ class LoginViewController: UIViewController {
         return field
     }()
     
+    /// passwordField
     private let passwordField: UITextField = {
         let field = UITextField()
         field.autocapitalizationType = .none
@@ -74,6 +83,7 @@ class LoginViewController: UIViewController {
         return field
     }()
     
+    /// loginButton
     private let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
@@ -100,12 +110,13 @@ class LoginViewController: UIViewController {
 //                                                            target: self,
 //                                                            action: #selector(tapRegister))
         
+        /// login button action
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         
         emailField.delegate = self
         passwordField.delegate = self
         
-        // add subviews
+        /// add subviews
 //        view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(scrollView)
@@ -148,8 +159,6 @@ class LoginViewController: UIViewController {
     
     
     @objc private func loginButtonTapped() {
-        
-        
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
@@ -161,6 +170,8 @@ class LoginViewController: UIViewController {
                   return
               }
         
+        spinner.show(in: view)
+        
         // Firebase login
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email,
@@ -171,15 +182,22 @@ class LoginViewController: UIViewController {
                 return
             }
             
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss()
+            }
+            
             guard let result = authResult, error == nil else {
                 strongSelf.alertUserLoginError(message: "Data entered incorrectly")
                 return
             }
             
             let user = result.user
-            strongSelf.succesfullLogin()
+            
+            UserDefaults.standard.set(email, forKey: "email")
+            
+//            strongSelf.succesfullLogin()
             print("Logged in User: \(user)")
-//            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
     
@@ -197,12 +215,12 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func succesfullLogin() {
-        let vc = NewProfileViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true) // переход на экран логина
-    }
+//    func succesfullLogin() {
+//        let vc = ConversationsViewController()
+//        let nav = UINavigationController(rootViewController: vc)
+//        nav.modalPresentationStyle = .fullScreen
+//        present(nav, animated: true) // переход на экран логина
+//    }
 
 }
 

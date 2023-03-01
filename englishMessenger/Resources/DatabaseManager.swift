@@ -14,14 +14,16 @@ final class DatabaseManager {
     
     private let database = Database.database().reference()
 
+    static func safeEmail(emailAddress: String) -> String {
+        var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+        return safeEmail
+    }
 }
 
 
 /// Inserting new users
 extension DatabaseManager {
-    
-   
-    
     public func userExists(with email: String, completion: @escaping ((Bool) -> Void)) {
         
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
@@ -38,11 +40,26 @@ extension DatabaseManager {
     }
     
     
-    public func insertNewUser(with user: AppUser) {
+//    public func insertNewUser(with user: AppUser, completion: @escaping (Bool) -> Void) {
+//        database.child(user.safeEmail).setValue([
+//            "firstName": user.firstName,
+//            "lastName": user.lastName
+//        ])
+//    }
+    
+    
+    public func insertNewUser(with user: AppUser, completion: @escaping (Bool) -> Void) {
         database.child(user.safeEmail).setValue([
             "firstName": user.firstName,
             "lastName": user.lastName
-        ])
+        ], withCompletionBlock: { error, _ in
+            guard error == nil else {
+                print("failed out")
+                completion(false)
+                return
+            }
+            completion(true)
+        })
     }
 }
 
@@ -55,8 +72,6 @@ struct AppUser {
     var safeEmail: String {
         var safeEmail = emailAddress.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
-    
-        
         return safeEmail
     }
 }

@@ -11,8 +11,12 @@
 		8311525F299F85410001B758 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311525E299F85410001B758 /* StartViewController.swift */; };
 		83115261299F90750001B758 /* Simpleoak-RpP3o.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83115260299F90750001B758 /* Simpleoak-RpP3o.ttf */; };
 		83115263299FA49B0001B758 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83115262299FA49B0001B758 /* NewProfileViewController.swift */; };
-		83546354299D7104000FCC1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83546353299D7104000FCC1B /* GoogleService-Info.plist */; };
+		833B6C9C29A60B090014A3FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 833B6C9B29A60B090014A3FB /* GoogleService-Info.plist */; };
 		83546356299D77D4000FCC1B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83546355299D77D4000FCC1B /* TestViewController.swift */; };
+		836116F129A0C6A200D32AB1 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836116EF29A0C6A200D32AB1 /* Realm.xcframework */; };
+		836116F229A0C6A200D32AB1 /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836116F029A0C6A200D32AB1 /* RealmSwift.xcframework */; };
+		8374B8FB29A2402F0047476E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374B8FA29A2402F0047476E /* ChatViewController.swift */; };
+		8374B8FD29A291030047476E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374B8FC29A291030047476E /* StorageManager.swift */; };
 		83939509299E11E40048BB07 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83939508299E11E40048BB07 /* DatabaseManager.swift */; };
 		8393950C299EBA120048BB07 /* Mysteria-Nouveau.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8393950B299EBA120048BB07 /* Mysteria-Nouveau.ttf */; };
 		8395F734299CCEC00038376B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395F733299CCEC00038376B /* AppDelegate.swift */; };
@@ -35,8 +39,12 @@
 		8311525E299F85410001B758 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		83115260299F90750001B758 /* Simpleoak-RpP3o.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Simpleoak-RpP3o.ttf"; path = "../../../../Downloads/Simpleoak/Simpleoak-RpP3o.ttf"; sourceTree = "<group>"; };
 		83115262299FA49B0001B758 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
-		83546353299D7104000FCC1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		833B6C9B29A60B090014A3FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83546355299D77D4000FCC1B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		836116EF29A0C6A200D32AB1 /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = "../../Downloads/realm-swift-10.36.0/14.2/Realm.xcframework"; sourceTree = "<group>"; };
+		836116F029A0C6A200D32AB1 /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = "../../Downloads/realm-swift-10.36.0/14.2/RealmSwift.xcframework"; sourceTree = "<group>"; };
+		8374B8FA29A2402F0047476E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8374B8FC29A291030047476E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		83939508299E11E40048BB07 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		8393950B299EBA120048BB07 /* Mysteria-Nouveau.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mysteria-Nouveau.ttf"; path = "../../../../Downloads/Mysteria-Nouveau.ttf"; sourceTree = "<group>"; };
 		8395F730299CCEC00038376B /* englishMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = englishMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +72,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3603F22F0D6B2DC17945308C /* Pods_englishMessenger.framework in Frameworks */,
+				836116F229A0C6A200D32AB1 /* RealmSwift.xcframework in Frameworks */,
+				836116F129A0C6A200D32AB1 /* Realm.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,8 @@
 		8395F727299CCEBF0038376B = {
 			isa = PBXGroup;
 			children = (
+				836116EF29A0C6A200D32AB1 /* Realm.xcframework */,
+				836116F029A0C6A200D32AB1 /* RealmSwift.xcframework */,
 				8395F732299CCEC00038376B /* englishMessenger */,
 				8395F731299CCEC00038376B /* Products */,
 				7639F76D5E1AB9CE059D70E0 /* Pods */,
@@ -117,8 +129,8 @@
 		8395F732299CCEC00038376B /* englishMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				833B6C9B29A60B090014A3FB /* GoogleService-Info.plist */,
 				8393950A299EBA000048BB07 /* Fonts */,
-				83546353299D7104000FCC1B /* GoogleService-Info.plist */,
 				8395F74B299CD16A0038376B /* Resources */,
 				8395F74A299CD15E0038376B /* ViewModels */,
 				8395F749299CD1540038376B /* Models */,
@@ -140,6 +152,7 @@
 				8395F758299CD39D0038376B /* ProfileViewController.swift */,
 				8311525E299F85410001B758 /* StartViewController.swift */,
 				83115262299FA49B0001B758 /* NewProfileViewController.swift */,
+				8374B8FA29A2402F0047476E /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 				8395F735299CCEC00038376B /* SceneDelegate.swift */,
 				8395F75B299CDA0E0038376B /* Extensions.swift */,
 				83939508299E11E40048BB07 /* DatabaseManager.swift */,
+				8374B8FC29A291030047476E /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,7 +222,7 @@
 				8395F72C299CCEBF0038376B /* Sources */,
 				8395F72D299CCEBF0038376B /* Frameworks */,
 				8395F72E299CCEBF0038376B /* Resources */,
-				039D8BEACB4FDB54CA02567E /* [CP] Embed Pods Frameworks */,
+				6A3F34BAAC007054B20CE211 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,33 +273,16 @@
 			files = (
 				8395F740299CCEC20038376B /* LaunchScreen.storyboard in Resources */,
 				83115261299F90750001B758 /* Simpleoak-RpP3o.ttf in Resources */,
-				83546354299D7104000FCC1B /* GoogleService-Info.plist in Resources */,
 				8395F73D299CCEC20038376B /* Assets.xcassets in Resources */,
 				8393950C299EBA120048BB07 /* Mysteria-Nouveau.ttf in Resources */,
 				8395F73B299CCEC00038376B /* Main.storyboard in Resources */,
+				833B6C9C29A60B090014A3FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		039D8BEACB4FDB54CA02567E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		25CE03C7977C1F86246D483A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +305,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6A3F34BAAC007054B20CE211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-englishMessenger/Pods-englishMessenger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,7 +342,9 @@
 				8395F759299CD39D0038376B /* ProfileViewController.swift in Sources */,
 				8395F736299CCEC00038376B /* SceneDelegate.swift in Sources */,
 				8395F753299CD33E0038376B /* PhotoViewerViewController.swift in Sources */,
+				8374B8FB29A2402F0047476E /* ChatViewController.swift in Sources */,
 				83115263299FA49B0001B758 /* NewProfileViewController.swift in Sources */,
+				8374B8FD29A291030047476E /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
